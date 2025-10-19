@@ -1,0 +1,17 @@
+.forecastCardContainer{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #2E3A59;
+    width: 27%;
+    height: 75%;
+    padding: 16px;
+    border-radius: 10px;
+
+    transition: ease 0.1s, transform ease 0.3s;
+}
+
+.forecastCardContainer:hover
+{
+    transform: translateY(-5px);
+}
