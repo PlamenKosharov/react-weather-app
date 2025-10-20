@@ -1,5 +1,6 @@
-import styles from "../styles/searchbar.module.css"
 import {useState} from "react";
+
+import styles from "../styles/SearchBar.module.css"
 
 export default function SearchBar({setCityData}) {
   const [searchText, setSearchText] = useState("");
@@ -30,11 +31,22 @@ export default function SearchBar({setCityData}) {
   }
   return(
     <div className={styles.searchBarContainer}>
-      <input className={styles.searchBar} type={"text"} placeholder={"Enter city..."}
-             value={searchText}
-             onChange={(e) => setSearchText(e.target.value)}
+
+      <input
+        className={styles.searchBar}
+        type={"text"}
+        placeholder={"Enter city..."}
+        value={searchText}
+        onChange={(e) => setSearchText(e.target.value)}
       />
-      <img onClick={handleSearch} className={styles.searchImg} alt = "search" src = "/images/search.png"/>
+
+      <img
+        onClick={handleSearch}
+        className={styles.searchImg}
+        alt = "search"
+        src = "/images/search.png"
+      />
+
     </div>
   )
 }
