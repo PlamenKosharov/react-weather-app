@@ -28,7 +28,6 @@ export default function SearchBar({setCityData}) {
     }
 
   }
-
   return(
     <div className={styles.searchBarContainer}>
       <input className={styles.searchBar} type={"text"} placeholder={"Enter city..."}
