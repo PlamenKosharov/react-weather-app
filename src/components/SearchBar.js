@@ -4,6 +4,8 @@ import styles from "../styles/SearchBar.module.css"
 
 export default function SearchBar({setCityData}) {
   const [searchText, setSearchText] = useState("");
+  const API_KEY = process.env.REACT_APP_API_KEY;
+  const API_URL = process.env.REACT_APP_API_URL;
 
   async function handleSearch() {
 
@@ -14,7 +16,7 @@ export default function SearchBar({setCityData}) {
 
     try{
 
-      const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchText}&appid=d457f9a1531004669ebc5a64b33dcf3c&units=metric`)
+      const response = await fetch(`${API_URL}${encodeURIComponent(searchText)}&appid=${API_KEY}&units=metric`);
 
       if (!response.ok){
         throw new Error("No such city.");
