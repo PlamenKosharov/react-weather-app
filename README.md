@@ -46,7 +46,7 @@ npm start
 ```
 
 
-## Screenshot
+## 📷 Screenshot
 ![Screenshot](https://i.ibb.co/n8VdLJTF/image.png)
 
 ## 📄 License
